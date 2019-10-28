@@ -5,6 +5,8 @@ const counterCountReducer =(counter = 0, action)=>{
         return counter + 1;
     } else if (action.type === 'COUNTER_MINUS'){
         return counter - 1;
+    } else if (action.type === 'COUNTER_DUPLI') {
+        return counter * 2;
     }
     return counter;
 };

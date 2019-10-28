@@ -8,3 +8,9 @@ export const oduzmi = () =>{
         type: 'COUNTER_MINUS'
     }
 }
+
+export const dodajDva = () =>{
+    return{
+        type: 'COUNTER_DUPLI'
+    }
+}

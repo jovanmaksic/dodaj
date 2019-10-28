@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { dodaj } from '../actions';
 import { oduzmi } from '../actions';
+import { dodajDva } from '../actions';
 
 
 const Buttons =(props) =>{
@@ -17,6 +18,11 @@ const Buttons =(props) =>{
                     Oduzmi
                 </button>
             </div>
+            <div>
+                <button onClick={props.dodajDva} className="ui button primary">
+                    Duplo
+                </button>
+            </div>
         </div>
     )
 }
@@ -29,5 +35,6 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
     dodaj: dodaj,
-    oduzmi: oduzmi
+    oduzmi: oduzmi,
+    dodajDva: dodajDva
 })(Buttons);
